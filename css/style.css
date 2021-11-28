@@ -33,10 +33,11 @@
 }
 
 .thumb {
+ width: 100%;
  height: calc(60vh / 5);
  display: block;
  filter: blur(2px);
- padding: 5px;
+ cursor: pointer;
 }
 
 .item img {
@@ -62,23 +63,30 @@
 .prev,
 .next {
  position: absolute;
- left: 50%;
- text-align: center;
+ left: 43%;
+ background-color: lightgrey;
  width: 30px;
  height: 30px;
- background-color: lightgrey;
  border-radius: 50%;
  line-height: 30px;
+ text-align: center;
+ margin: 10px 0;
  cursor: pointer;
- transform: translate(-50%, 0);
+}
+
+.prev:hover,
+.next:hover {
+ transform: scale(1.2);
+ transition: 0.5s ease;
+ background-color: white;
 }
 
 .prev {
- top: 3%;
+ top: 1%;
 }
 
 .next {
- bottom: 3%;
+ bottom: 1%;
 }
 
 .active {
